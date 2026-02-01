@@ -4,14 +4,19 @@
   <img src="assets/og_image.png" alt="Auto-Commenter - A Claude skill that automatically posts personalized, authentic comments in your target communities" width="100%">
 </p>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+<p align="center">
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
+  <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome"></a>
+</p>
 
-> Claude AI skill that writes comments indistinguishable from your actual writing style.
+<p align="center">
+  <a href="https://x.com/JoshuaIPark"><img src="https://img.shields.io/badge/Follow%20on%20X-000000?style=for-the-badge&logo=x&logoColor=white" alt="Follow on X"></a>
+  <a href="https://discord.gg/vRp5Zh3HGu"><img src="https://img.shields.io/badge/Join%20Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Join Discord"></a>
+</p>
 
-A marketing automation framework using Claude Skills and Playwright MCP for authentic community engagement. Features personalized comment generation, target community selection, daily tracking, batch execution, and lead identification.
+>A marketing automation framework using Claude Skills and Playwright MCP for authentic community engagement. Features personalized comment generation, target community selection, daily tracking, batch execution, and lead identification.
 
-**✨ Currently supports Reddit** — easily extensible to Twitter, LinkedIn, Discord, and other platforms by adding personalization files.
+**Currently supports Reddit** — easily extensible to Twitter, LinkedIn, Discord, and other platforms by adding personalization files.
 
 ---
 
@@ -67,7 +72,7 @@ npm install
 "Fill today's quota"
 ```
 
-📖 **Detailed setup:** See [SETUP.md](SETUP.md)
+**Detailed setup:** See [SETUP.md](SETUP.md)
 
 ---
 
@@ -92,12 +97,12 @@ auto-commenter/
 
 ## Key Features
 
-- ✅ **Style Personalization** - 16-point checklist ensures natural, human-like comments
-- ✅ **Batch Execution** - Automatically fills daily quotas (e.g., 24 comments across 8 subreddits)
-- ✅ **Lead Identification** - Tracks potential customers interested in your product
-- ✅ **Activity Tracking** - Daily logs with comment links and metrics
-- ✅ **Multi-Platform Ready** - Extend to Twitter, LinkedIn, Discord by adding personalization files
-- ✅ **Community-Respectful** - Follows rate limits, subreddit rules, and provides real value
+- **Style Personalization** - 16-point checklist ensures natural, human-like comments
+- **Batch Execution** - Automatically fills daily quotas (e.g., 24 comments across 8 subreddits)
+- **Lead Identification** - Tracks potential customers interested in your product
+- **Activity Tracking** - Daily logs with comment links and metrics
+- **Multi-Platform Ready** - Extend to Twitter, LinkedIn, Discord by adding personalization files
+- **Community-Respectful** - Follows rate limits, subreddit rules, and provides real value
 
 ---
 
@@ -138,10 +143,10 @@ Currently supports **Reddit**. To add other platforms:
 
 ## Documentation
 
-- 📖 [SETUP.md](SETUP.md) - Complete setup guide
-- 📖 [QUICK_REFERENCE.md](QUICK_REFERENCE.md) - Commands and tips
-- 📖 [CONTRIBUTING.md](CONTRIBUTING.md) - Contribution guidelines
-- 📖 [CHANGES.md](CHANGES.md) - Conversion to open-source summary
+- [SETUP.md](SETUP.md) - Complete setup guide
+- [QUICK_REFERENCE.md](QUICK_REFERENCE.md) - Commands and tips
+- [CONTRIBUTING.md](CONTRIBUTING.md) - Contribution guidelines
+- [CHANGES.md](CHANGES.md) - Conversion to open-source summary
 
 ---
 
@@ -171,13 +176,31 @@ MIT License - see [LICENSE](LICENSE)
 
 ---
 
-## Support
-
-- 🐛 [Report Bug](../../issues/new?template=bug_report.md)
-- 💡 [Request Feature](../../issues/new?template=feature_request.md)
-- 🤝 [Contribute](CONTRIBUTING.md)
-- 📖 [Setup Help](SETUP.md)
+**Built with [Claude AI](https://claude.ai) and [Playwright MCP](https://github.com/executeautomation/playwright-mcp)**
 
 ---
 
-**Built with [Claude AI](https://claude.ai) and [Playwright MCP](https://github.com/executeautomation/playwright-mcp)**
+## Support
+
+- [Report Bug](../../issues/new?template=bug_report.md)
+- [Request Feature](../../issues/new?template=feature_request.md)
+- [Contribute](CONTRIBUTING.md)
+- [Setup Help](SETUP.md)
+
+---
+
+## Upgrade Your Agents with Membase
+
+Want to take your AI agents to the next level? Connects memory across all your agents, so they never forget context and always stay in sync.
+
+<p align="center">
+  <b>Join 1,300+ developers personalizing agents</b>
+</p>
+
+<p align="center">
+  <a href="https://membase.so/?utm_source=github&utm_medium=auto-commenter">
+    <img src="https://img.shields.io/badge/Try Membase for Free-4F46E5?style=for-the-badge"/>
+  </a>
+</p>
+
+---
