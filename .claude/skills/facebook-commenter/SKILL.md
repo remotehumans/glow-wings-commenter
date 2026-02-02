@@ -1,11 +1,18 @@
 ---
 name: facebook-commenter
-description: Multi-account Facebook commenting skill for cabin crew communities. Writes helpful, authentic comments to promote Glowings through genuine community engagement.
+description: This skill should be used when posting comments in Facebook cabin crew communities to promote Glowings. It provides multi-account management, authentic engagement workflows, and personalization guidelines for genuine community participation.
 ---
 
 # Facebook Commenter Skill
 
 > Authentic community engagement in cabin crew Facebook groups and pages
+
+## When to Use This Skill
+
+- To post helpful comments in cabin crew Facebook groups
+- To run batch commenting sessions across multiple groups
+- To manage multi-account activity distribution
+- For batch mode, see `BATCH.md` in this skill directory
 
 ---
 
@@ -24,9 +31,9 @@ This skill uses **agent-browser** CLI for Facebook interaction.
 | `agent-browser get text <ref>` | Extract text from elements |
 
 ### Important Notes
-- Always use `snapshot` before interacting - Facebook DOM changes frequently
-- Use refs from snapshot (like `@e42`) not CSS selectors
-- Minimize token usage - only pass essential info to each command
+- Always call `snapshot` before interacting - Facebook DOM changes frequently
+- Use refs from snapshot (like `@e42`) rather than CSS selectors
+- Minimize token usage by passing only essential info to each command
 
 ---
 
@@ -121,30 +128,30 @@ This skill uses **agent-browser** CLI for Facebook interaction.
    → agent-browser snapshot
 
 2. Read post content completely:
-   - What is OP actually asking/sharing?
-   - What's their situation? (applying, preparing, rejected, etc.)
-   - Which airline(s) are they targeting?
-   - What specific help do they need?
+   - Identify what OP is actually asking/sharing
+   - Determine their situation (applying, preparing, rejected, etc.)
+   - Note which airline(s) they are targeting
+   - Understand what specific help they need
 
 3. Analyze existing comments:
-   - What advice has already been given?
-   - What's the tone of the discussion?
-   - Is there a gap you can fill?
+   - Review what advice has already been given
+   - Assess the tone of the discussion
+   - Identify gaps to fill with new value
 
 4. Decide if worth commenting:
-   - Can you add genuine value?
-   - Is Glowings mention natural here? (often NO)
-   - Does your expertise match their need?
+   - Evaluate whether genuine value can be added
+   - Determine if Glowings mention fits naturally (often NO)
+   - Assess expertise match with their need
 
 5. If site/link verification needed:
-   - If they shared a CV/portfolio link, visit it
-   - Only comment on what you actually saw
+   - Visit any shared CV/portfolio link
+   - Comment only on what was actually observed
 ```
 
 ### Step 5: Draft Comment
 
 ```
-1. Based on Step 4 analysis, draft comment that:
+1. Based on Step 4 analysis, draft a comment that:
    - Directly addresses OP's actual question/need
    - Provides specific, actionable advice
    - Matches the group's tone (warm, supportive for cabin crew)
@@ -157,31 +164,31 @@ This skill uses **agent-browser** CLI for Facebook interaction.
    - Empathy + specific advice
 
 3. Glowings mention decision:
-   - ONLY mention if OP explicitly asks for resources/tools
-   - ONLY mention if naturally fits ("I used X when prepping...")
+   - Mention ONLY if OP explicitly asks for resources/tools
+   - Mention ONLY if it naturally fits ("I used X when prepping...")
    - NEVER force it - most comments should NOT mention Glowings
-   - See resources/product.md for natural mention templates
+   - Refer to resources/product.md for natural mention templates
 ```
 
 ### Step 6: Personalization Review
 
 ```
-1. Check resources/personalization_facebook.md
-   → Review all checklist items against your draft
+1. Load resources/personalization_facebook.md
+   → Review all checklist items against the draft
 
 2. Key checks:
-   □ Does it sound human? (not AI-generated)
-   □ Is length appropriate for this post type?
+   □ Sounds human (not AI-generated)
+   □ Length appropriate for this post type
    □ No cliché phrases ("Great question!", "Hope this helps!")
    □ Matches Facebook tone (warmer than Reddit)
    □ No obvious self-promotion
 
 3. Review recent comments in tracking:
-   - Is structure varied from last 5 comments?
-   - Is length varied?
-   - Not ending every comment with a question?
+   - Verify structure varies from last 5 comments
+   - Verify length varies
+   - Confirm not ending every comment with a question
 
-4. PASS → Step 7 / FAIL → Revise and re-check
+4. PASS → Proceed to Step 7 / FAIL → Revise and re-check
 ```
 
 ### Step 7: Post Comment

@@ -1,11 +1,17 @@
 ---
 name: facebook-warmup
-description: Semi-automated warm-up workflow for new Facebook accounts. Builds credibility through gradual, human-like activity before enabling commenting.
+description: This skill should be used when warming up new Facebook accounts before enabling commenting. It provides a 14-day semi-automated workflow to build account credibility through gradual, human-like activity patterns including likes, group joins, and status updates.
 ---
 
 # Facebook Account Warm-up Skill
 
 > Build account credibility through natural activity patterns over 14 days
+
+## When to Use This Skill
+
+- To warm up a newly created Facebook account
+- To track warm-up progress toward graduation to ACTIVE status
+- To execute daily warm-up activities (likes, group joins, status posts)
 
 ---
 
@@ -23,9 +29,9 @@ This skill uses **agent-browser** CLI for Facebook interaction.
 | `agent-browser press <key>` | Keyboard input (Enter, Tab, etc.) |
 
 ### Important Notes
-- Use `snapshot` to understand page structure - returns refs like `@e2` for targeting
+- Call `snapshot` to understand page structure - returns refs like `@e2` for targeting
 - Prefer semantic refs from snapshot over CSS selectors
-- Facebook DOM changes frequently - always snapshot before interacting
+- Facebook DOM changes frequently - always call snapshot before interacting
 
 ---
 
@@ -46,10 +52,10 @@ This skill uses **agent-browser** CLI for Facebook interaction.
 ### Step 1: Load Account Profile
 
 ```
-1. Read account profile from accounts/profiles/[account-name].md
+1. Load account profile from accounts/profiles/[account-name].md
 2. Check current warm-up progress in tracking/warmup/[account-name]/
-3. Calculate what activities are needed today
-4. Verify account isn't already at daily activity limits
+3. Calculate activities needed for today
+4. Verify account has not reached daily activity limits
 ```
 
 ### Step 2: Login Verification
@@ -203,8 +209,8 @@ Use these templates for organic-looking posts:
 ## Cautions
 
 1. **No commenting** during warm-up - only likes, reactions, shares
-2. **Vary activity times** - don't always engage at the same time
+2. **Vary activity times** - avoid engaging at the same time daily
 3. **Space out group joins** - max 2 per day, skip some days
 4. **Authentic persona** - keep all activity consistent with persona backstory
 5. **Watch for warnings** - stop immediately if Facebook shows any restriction notice
-6. **Don't rush** - better to graduate on day 16 than get banned on day 10
+6. **Avoid rushing** - graduating on day 16 is better than getting banned on day 10
