@@ -10,24 +10,25 @@ license: MIT
 
 ---
 
-## Required Tool: Playwright MCP
+## Required Tool: agent-browser
 
-This skill uses **Playwright MCP** to interact with Reddit.
+This skill uses **agent-browser** CLI for browser automation.
 
-### Main MCP Tools
-| MCP Tool | Purpose |
-|----------|---------|
-| `browser_navigate` | Navigate to Reddit pages |
-| `browser_snapshot` | Capture page structure (accessibility tree) |
-| `browser_click` | Click elements (comment box, buttons, etc.) |
-| `browser_type` | Input text (comment content) |
-| `browser_wait_for` | Wait for page loading |
+### Key Commands
+| Command | Purpose |
+|---------|---------|
+| `agent-browser open <url>` | Navigate to Reddit pages |
+| `agent-browser snapshot` | Get page structure (accessibility tree with refs) |
+| `agent-browser click <ref>` | Click elements using @ref from snapshot |
+| `agent-browser fill <ref> <text>` | Enter text in fields |
+| `agent-browser press <key>` | Keyboard input (Enter, Tab, etc.) |
+| `agent-browser get text <ref>` | Extract text from elements |
 
-### ⚠️ Important Notes When Using Playwright MCP
-- **Minimize tokens**: When calling MCP, don't pass entire conversation context—only concisely summarize the essential information needed for that action
-- **Direct navigation**: Navigate directly to URLs with `browser_navigate` rather than clicking elements (prevents click errors, saves tokens)
-- **Concise instructions**: Pass only minimal instructions like "Navigate to [URL]", "Click [element]", "Type: [text]"
-- **⚠️ No screenshots**: Do NOT use `browser_take_screenshot`. Always use only `browser_snapshot` for page verification (accessibility tree is sufficient and doesn't save files)
+### Important Notes
+- Use `snapshot` to understand page structure - returns refs like `@e42` for targeting
+- Direct navigation with `open` is preferred over clicking links
+- Use refs from snapshot, not CSS selectors
+- Minimize token usage - only pass essential info to each command
 
 ---
 
@@ -59,13 +60,13 @@ This skill uses **Playwright MCP** to interact with Reddit.
 ### Step 2: Access Reddit and Explore Posts
 
 ```
-1. Access Reddit with Playwright MCP
-   → browser_navigate("https://www.reddit.com/r/{selected_subreddit}/new/")
+1. Access Reddit
+   → agent-browser open https://www.reddit.com/r/{selected_subreddit}/new/
    or
-   → browser_navigate("https://www.reddit.com/r/{selected_subreddit}/rising/")
+   → agent-browser open https://www.reddit.com/r/{selected_subreddit}/rising/
 
 2. Page snapshot
-   → browser_snapshot()
+   → agent-browser snapshot
 
 3. Criteria for selecting posts to comment on:
    • Posts where you can share insights or provide feedback
@@ -89,9 +90,9 @@ This skill uses **Playwright MCP** to interact with Reddit.
 ⚠️ CRITICAL: Must perform this step before writing comment
 
 0. Navigate directly to post
-   → browser_navigate(post URL secured in Step 2)
+   → agent-browser open [post URL from Step 2]
    → Navigate directly to URL, don't click on post (prevents click errors)
-   → browser_snapshot()
+   → agent-browser snapshot
 
 1. Read post content accurately:
    - Understand what OP is actually asking
@@ -119,8 +120,8 @@ This skill uses **Playwright MCP** to interact with Reddit.
    - Is feedback requested on UX, design, performance that requires actual verification?
 
    → If YES:
-     • Visit actual site with browser_navigate(provided link)
-     • Check UI/UX with browser_snapshot()
+     • agent-browser open [provided link]
+     • agent-browser snapshot
      • Write feedback based ONLY on what you actually saw
      • Absolutely NO speculative feedback on things you didn't see
 
@@ -165,16 +166,22 @@ This skill uses **Playwright MCP** to interact with Reddit.
 
 ```
 1. Click comment input box
-   → Check comment input element after browser_snapshot()
-   → browser_click(comment box ref)
+   → agent-browser snapshot
+   → agent-browser click [comment box ref]
 
 2. Input comment content
-   → browser_type(reviewed comment)
+   → agent-browser fill [comment input ref] [reviewed comment]
 
 3. Click post button
-   → browser_click(post button ref)
+   → agent-browser click [post button ref]
+   OR
+   → agent-browser press Enter
 
-4. Secure comment URL
+4. Verify posted
+   → agent-browser snapshot
+   → Confirm comment appears
+
+5. Secure comment URL
    → Copy comment permalink after posting
 ```
 
@@ -237,9 +244,4 @@ Update tracking/reddit/[today's-date].md file:
 4. **Spam Prevention**: Absolutely NO copy-pasting same content
 5. **Review Required**: Rewrite if any checklist item violated
 6. **⚠️ Step 3 Required**: NEVER write comment without analyzing post content. Judging only by keywords can cause serious errors
-7. **⚠️ Minimize Playwright MCP tokens**:
-   - Don't pass entire context when calling Playwright MCP
-   - Concisely summarize only essential information needed for each MCP call
-   - E.g.: Only minimal instructions like "Navigate to [URL]", "Click comment box", "Type: [text]"
-   - Prevent errors from excessive input tokens
-8. **⚠️ Post Navigation**: Use browser_navigate directly with URL instead of clicking post (prevents click errors)
+7. **⚠️ Direct Navigation**: Use `agent-browser open` directly with URL instead of clicking post (prevents click errors)

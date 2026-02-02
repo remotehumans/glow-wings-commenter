@@ -6,10 +6,17 @@ Products/
 # Actual activity data (keep templates)
 tracking/reddit/*.md
 !tracking/reddit/template.md
+tracking/facebook/*/*.md
+tracking/facebook/*.md
+!tracking/facebook/template.md
+tracking/warmup/*/*.md
+tracking/warmup/*.md
+!tracking/warmup/template.md
 
-# Actual leads data
+# Actual leads data (keep templates)
 leads/*.md
 !leads/reddit.md
+!leads/facebook.md
 
 # Personal personalization files (users should create their own)
 .claude/skills/reddit-commenter/resources/personalization_reddit.md.personal
