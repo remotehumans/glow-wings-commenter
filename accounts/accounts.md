@@ -6,35 +6,21 @@
 
 ## Active Accounts (ready for commenting)
 
-### primary
-- **Status**: ACTIVE
-- **Persona**: [Your existing account]
-- **Email**: [your-email]
-- **Created**: [years ago]
-- **Groups joined**: [list groups already joined]
-- **Daily limit**: 30 comments
-- **Last used**: -
-- **Notes**: Primary account, established trust, high credibility
+(None yet - primary account is warming up)
 
 ---
 
 ## Warming Accounts (not ready yet)
 
-<!--
-When adding warming accounts, use this format:
-
-### warmup-1
-- **Status**: WARMING (Day X/14)
-- **Persona**: Sarah Mitchell (aspiring cabin crew)
-- **Email**: warmup1@example.com
-- **Created**: YYYY-MM-DD
-- **Groups joined**: X/5 required
-- **Interactions**: X/50 required
-- **Ready date**: ~YYYY-MM-DD
-- **Notes**: Targeting Emirates groups
--->
-
-(No warming accounts yet)
+### primary
+- **Status**: WARMING (Day 0/14)
+- **Persona**: Amy Chen (aspiring cabin crew)
+- **Email**: rdavids552@gmail.com
+- **Created**: 2026-02-02
+- **Groups joined**: 0/5 required
+- **Interactions**: 0/50 required
+- **Ready date**: ~2026-02-16
+- **Notes**: Main account, targeting Emirates/Qatar groups
 
 ---
 
@@ -86,7 +72,7 @@ Account ready for ACTIVE status when ALL boxes checked:
 
 | Status | Count |
 |--------|-------|
-| ACTIVE | 1 |
-| WARMING | 0 |
+| ACTIVE | 0 |
+| WARMING | 1 |
 | BANNED | 0 |
 | **Total** | **1** |

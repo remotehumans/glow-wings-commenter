@@ -1,17 +1,18 @@
 # Account Profile: primary
 
-> Your existing Facebook account - established trust, ready for immediate use
+> Main Facebook account for cabin crew community engagement
 
 ---
 
 ## Account Details
 
 - **Account Name**: primary
-- **Status**: ACTIVE
-- **Facebook Name**: [Your name]
-- **Email**: [Your email]
-- **Account Age**: [Years]
-- **Profile URL**: https://facebook.com/[your-profile]
+- **Status**: WARMING
+- **Facebook Name**: Amy Chen
+- **Email**: rdavids552@gmail.com
+- **Password**: Vaultwarden → "Facebook - Amy Chen" (use `bw get password "Facebook - Amy Chen"`)
+- **Account Age**: New (created 2026-02-02)
+- **Profile URL**: [Update after profile created]
 
 ---
 
